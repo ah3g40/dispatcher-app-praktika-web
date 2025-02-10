@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить новую запись</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="header-container">
+        <nav class="navbar">
+            <a class="navbar-logo" href="http://example">
+                <svg width="56" height="56" fill="#FFF" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="none">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"><path d="M13 1.9980469L13 7.9980469L8 7.9980469 A 1.0001 1.0001 0 0 0 7 8.9980469L7 12.998047 A 1.0001 1.0001 
+                        0 0 0 7.1425781 13.513672L9.2324219 16.998047L8 16.998047 A 1.0001 1.0001 0 0 0 7 17.998047L7 30.998047L4 30.998047 A 1.0001 1.0001 0 
+                        0 0 3 31.998047L3 44.998047 A 1.0001 1.0001 0 0 0 4 45.998047L45 45.998047 A 1.0001 1.0001 0 0 0 46 44.998047L46 31.998047 A 1.0001 1.0001 
+                        0 0 0 45 30.998047L21 30.998047L21 17.998047 A 1.0001 1.0001 0 0 0 20 16.998047L18.767578 16.998047L20.857422 13.513672 A 1.0001 1.0001 0 0 
+                        0 21 12.998047L21 8.9980469 A 1.0001 1.0001 0 0 0 20 7.9980469L15 7.9980469L15 1.9980469L13 1.9980469 z M 30.318359 3.7363281L37.087891 
+                        10.556641L33.582031 12.052734L29 10.769531L31.462891 14.033203L32.101562 18.074219L34.353516 13.878906L37.863281 12.382812L38.072266 21.998047L42.783203 
+                        10.283203L46.427734 8.7285156C46.930734 8.5145156 47.165172 7.9317344 46.951172 7.4277344C46.737172 6.9237344 46.157344 6.6872969 45.652344 6.9042969L42.007812 
+                        8.4589844L30.318359 3.7363281 z M 9 9.9980469L19 9.9980469L19 12.722656L16.433594 16.998047L11.566406 16.998047L9 12.722656L9 9.9980469 z M 9 18.998047L10.970703 
+                        18.998047L17 18.998047L19 18.998047L19 30.998047L9 30.998047L9 18.998047 z M 5 32.998047L8 32.998047L20 32.998047L44 32.998047L44 43.998047L40 43.998047L40 
+                        35.998047L35 35.998047L35 43.998047L5 43.998047L5 32.998047 z M 8 35.998047L8 39.998047L19 39.998047L19 35.998047L8 35.998047 z M 21 35.998047L21 39.998047L32 
+                        39.998047L32 35.998047L21 35.998047 z">
+
+                    </path>
+                    </g>
+                </svg>
+            </a>
+            <a class="navbar-element" href="http://example">Главная</a>
+            <a class="navbar-element" href="http://example/airports">Аэропорты</a>
+            
+            <a class="navbar-element" href="http://example/cities">Города</a>
+            <a class="navbar-element" href="http://example/companies">Компании</a>
+            <a class="navbar-element" href="http://example/carriercompanies">Компании перевозчики</a>
+            <a class="navbar-element" href="http://example/countries">Страны</a>
+            <a class="navbar-element" href="http://example/pilots">Пилоты</a>
+            <a class="navbar-element" href="http://example/planes">Самолеты</a>
+            <a class="navbar-element" href="http://example/planetypes">Тип Самолета</a>
+            <a class="navbar-element" href="http://example/flights-history">История полётов</a>
+        </nav>
+    </div>
+
+    <main class="main">
+        <section class="section-buttons">
+            <div class="button-list-container">
+                <a class="airports-button btn menu-btn" href="/"><svg width="20" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.11 8l1.415-1.414 4.95-4.95 1.414 1.414L6.94 8l4.95 4.95-1.414 1.414-4.95-4.95L4.111 8z" fill="#FFF"></path>
+                </svg><span>Назад</span></a>
+            </div>
+        </section>
+
+        <section class="section-main">
+            <div class="buttonMobile">
+                <a class="btn menu-btn" href="/"><svg width="20" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.11 8l1.415-1.414 4.95-4.95 1.414 1.414L6.94 8l4.95 4.95-1.414 1.414-4.95-4.95L4.111 8z" fill="#FFF"></path>
+                </svg><span>Назад</span></a>
+            </div>
+            <div class="plane-form-container">
+                <form name="flightForm" method="post">
+                    <div class="select-item-container">
+                        <label for="carrierCompany">Компания-перевозчик</label>
+                        <select class="form-field" id="carrier-company-list" name="carrierCompany" required>
+                            <option value="" selected disabled>Выберите компанию</option>
+                        </select>
+                    </div>
+                    <div class="select-item-container">
+                        <label for="plane">Самолёт</label>
+                        <select class="form-field" id="plane-list" name="plane" required>
+                            <option value="" selected disabled>Выберите самолёт</option>
+                        </select>
+                    </div>
+                    <div class="select-item-container">
+                        <label id="airport-from-label" for="airportFrom">Точка отправления</label>
+                        <select class="form-field" id="airport-from-list" name="airportFrom">
+                            <option value="" selected disabled>Выберите точку отправления</option>
+                        </select>
+                        <span id="airport-from-span" style="display: none; color: rgb(255, 238, 0)"></span>
+                    </div>
+                    <div class="select-item-container">
+                        <label for="airportTo">Точка прибытия</label>
+                        <select class="form-field" id="airport-to-list" name="airportTo" required>
+                            <option value="" selected disabled>Выберите точку прибытия</option>
+                        </select>
+                    </div>
+                    <div class="select-item-container">
+                        <label for="captain">Капитан</label>
+                        <select class="form-field" id="captain-list" name="captain" required>
+                            <option value="" selected disabled>Выберите капитана</option>
+                        </select>
+                    </div>
+                    <div class="select-item-container">
+                        <label for="pilot">Второй пилот</label>
+                        <select class="form-field" id="pilot-list" name="pilot" required>
+                            <option value="" selected disabled>Выберите второго пилота</option>
+                        </select>
+                    </div>
+                    <div class="form-item-container">
+                        <label for="fullness">Заполненность</label> 
+                        <input class="form-field" type="number" name="fullness" id="fullness" placeholder="Укажите заполненность" required>
+                        <span style="color: red; display: none;" id="max-val-ful"></span>
+                    </div>
+                    <div class="form-item-container">
+                        <label for="departureDate">Дата отправления</label>
+                        <input class="form-field" type="date" name="departureDate" id="departure-date" placeholder="Выберите дату" required>
+                    </div>
+                    <div class="form-item-container">
+                        <label for="departureTime">Время отправления</label>
+                        <input class="form-field" type="time" name="departureTime" id="departure-time" placeholder="Выберите время" required>
+                    </div>
+                    <div class="form-item-container">
+                        <label for="arrivalDate">Дата прибытия</label>
+                        <input class="form-field" type="date" name="arrivalDate" id="arrival-date" placeholder="Выберите дату" required>
+                    </div>
+                    <div class="form-item-container">
+                        <label for="arrivalTime">Время прибытия</label>
+                        <input class="form-field" type="time" name="arrivalTime" id="arrival-time" placeholder="Выберите время" required>
+                    </div>
+                    <input id="form-submit-btn" class="form-submit btn" type="submit" value="Подтвердить" required>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="/js/jquery-3.7.1.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/flights/add.js"></script>
+    <script>
+        $(document).ready(function() {
+            const $curPlane = $('#plane-list');
+            const $fullness = $('#fullness');
+            const $maxValTextFul = $('#max-val-ful');
+
+            $curPlane.on('change', function() {
+                getApiUrls().then(function(urls) {
+            const globalPlanesUrl = urls.Planes.Global + "/"+$("[name='plane']").val();
+            $.ajax({
+                url: globalPlanesUrl,
+                method: 'GET',
+                timeout: 500,
+                success: function(data) {
+                    console.log(data);
+                    var maxFullness = data.passengerCapacity;
+                    
+                    $.ajax({
+                        url: urls.FlightsHistory.Global+"/details?number="+data.tailNumber,
+                        method: 'GET',
+                        timeout: 500,
+                        success: function(lastFlight) {
+                            console.log(lastFlight);
+
+                            if(lastFlight.plane.tailNumber == data.tailNumber) {
+                                $('#airport-from-label').hide();
+                                $('#airport-from-list').hide();
+                                $('#airport-from-span').show();
+                                $('#airport-from-span').text(`Сейчас самолёт находится в ${lastFlight.airportTo.name}! Вылет будет отсюда.`)
+                            } else {
+                                $('#airport-from-label').show();
+                                $('#airport-from-list').show();
+                                $('#airport-from-span').hide();
+                            }
+                        },
+                        error: function(jqXHR, textStatus) {
+                            console.log('Ошибка сети: ' + textStatus);
+                            $('#airport-from-label').show();
+                            $('#airport-from-list').show();
+                            $('#airport-from-span').hide();
+                        }
+                    })
+                    $fullness.on('input', function() {
+                        let maxVal = 3;
+                        if ($(this).val().length > maxVal) {
+                            $(this).val($(this).val().slice(0, maxVal));
+                            $maxValTextFul.show();
+                            $maxValTextFul.text(`Значение не может быть выше ${maxFullness}`);
+                        }
+
+                        if ($(this).val().startsWith('-')) {
+                            $(this).val($(this).val().slice(0, -1))
+                        }
+
+                        if (Number($(this).val()) > maxFullness ) {
+                            $(this).val($(this).val().slice(0, -1));
+                            $maxValTextFul.show();
+                            $maxValTextFul.text(`Значение не может быть выше ${maxFullness}`);
+                        } else {
+                            $maxValTextFul.hide();
+                        }
+
+                    })
+                },
+                error: function(jqXHR, textStatus) {
+                    getApiUrls().then(function(urls) {
+                    const localPlanesUrl = urls.Planes.Local + "/"+$("[name='plane']").val();
+                    $.ajax({
+                        url: localPlanesUrl,
+                        method: 'GET',
+                        timeout: 500,
+                        success: function(data) {
+                            console.log(data);
+                            var maxFullness = data.passengerCapacity;
+                            
+                            $.ajax({
+                                url: urls.FlightsHistory.Local+"/details?number="+data.tailNumber,
+                                method: 'GET',
+                                timeout: 500,
+                                success: function(lastFlight) {
+                                    console.log(lastFlight);
+
+                                    if(lastFlight.plane.tailNumber == data.tailNumber) {
+                                        $('#airport-from-label').hide();
+                                        $('#airport-from-list').hide();
+                                        $('#airport-from-span').show();
+                                        $('#airport-from-span').text(`Сейчас самолёт находится в ${lastFlight.airportTo.name}! Вылет будет отсюда.`)
+                                    } else {
+                                        $('#airport-from-label').show();
+                                        $('#airport-from-list').show();
+                                        $('#airport-from-span').hide();
+                                    }
+                                },
+                                error: function(jqXHR, textStatus) {
+                                    console.log('Ошибка сети: ' + textStatus);
+                                    $('#airport-from-label').show();
+                                    $('#airport-from-list').show();
+                                    $('#airport-from-span').hide();
+                                }
+                            })
+                            $fullness.on('input', function() {
+                                let maxVal = 3;
+                                if ($(this).val().length > maxVal) {
+                                    $(this).val($(this).val().slice(0, maxVal));
+                                    $maxValTextFul.show();
+                                    $maxValTextFul.text(`Значение не может быть выше ${maxFullness}`);
+                                }
+
+                                if ($(this).val().startsWith('-')) {
+                                    $(this).val($(this).val().slice(0, -1))
+                                }
+
+                                if (Number($(this).val()) > maxFullness ) {
+                                    $(this).val($(this).val().slice(0, -1));
+                                    $maxValTextFul.show();
+                                    $maxValTextFul.text(`Значение не может быть выше ${maxFullness}`);
+                                } else {
+                                    $maxValTextFul.hide();
+                                }
+                            
+                            })
+                        }
+                    })
+                }
+            )}});
+        })
+        })
+    })
+    </script>
