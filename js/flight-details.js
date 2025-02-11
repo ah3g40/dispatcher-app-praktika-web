@@ -46,62 +46,6 @@ $(document).ready(function() {
         });
     }
 
-    // function displayFlightsInLeftMenu(flights) {
-    //     const $list = $('#flight-info-list');
-
-    //     const carrierCompany = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: flights.carrierCompany.name+" "+flights.plane.company.name+" "+flights.plane.tailNumber
-    //     })
-
-    //     const captain = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: "Капитан: "+flights.captain.lastName+" "+flights.captain.firstName+" "+flights.captain.middleName
-    //     });
-    //     const pilot = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: "Второй пилот: "+flights.pilot.lastName+" "+flights.pilot.firstName+" "+flights.pilot.middleName
-    //     });
-
-    //     const airports = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: flights.airportFrom.icao+" ("+flights.airportFrom.iata+") >> "+flights.airportTo.icao+" ("+flights.airportTo.iata+")"
-    //     });
-    //     const fullness = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: "Заполненность: "+flights.fullness+" чел"
-    //     });
-    //     let departureDateString = flights.departureDate;
-    //     let cleanedDepartureDate = departureDateString.replace(/^(.*?)(T\d{2}:\d{2}).*$/, '$1 $2');
-    //     cleanedDepartureDate = cleanedDepartureDate.replace('T', ' ');
-    //     const departureDate = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: "Дата вылета: "+cleanedDepartureDate
-    //     });
-    //     let arrivalDateString = flights.arrivalDate;
-    //     let cleanedArrivalDate = arrivalDateString.replace(/^(.*?)(T\d{2}:\d{2}).*$/, '$1 $2');
-    //     cleanedArrivalDate = cleanedArrivalDate.replace('T', ' ');
-    //     const arrivalDate = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: "Дата прилёта: "+cleanedArrivalDate
-    //     });
-        
-    //     const flightSpeed = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: "Скорость: "+flights.speed+" kn"
-    //     });
-    //     const coords = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: "Координаты: "+flights.latitude+", "+flights.longitude
-    //     });
-    //     const distanceBetweenAirports = $('<li>', {
-    //         class: 'flight-info-list-item',
-    //         text: "Расстояние между аэропортами: "+flights.distanceBetweenAirportsKm+" км ("+flights.distanceBetweenAirportsM+" м)"
-    //     });
-
-    //     $list.append(carrierCompany, captain, pilot, airports, fullness, departureDate, arrivalDate, flightSpeed, coords, distanceBetweenAirports);
-    // }
-
     function displayFlights(flights) {    
         const $list = $('#flight-info-list');
         const $currentFlight = $('#table');
@@ -219,9 +163,6 @@ $(document).ready(function() {
                         strokeStyle: 'shortdash',
                         geodesic: true
                 });
-
-            
-                // flight.editor.startEditing();
             
                 myMap.geoObjects.add(airport1Mark);
                 myMap.geoObjects.add(airport2Mark);
@@ -305,36 +246,6 @@ $(document).ready(function() {
                         });
                     });
                 }, 1500);
-                
-                // setTimeout(
-                // while(false) {
-                //     getApiUrls().then(function(urls) {
-                //         const globalUrl = urls.Flights.Global + "/" + id;
-                //         data = $.ajax({
-                //         url: globalUrl,
-                //         method: 'GET',
-                //         timeout: 500,
-                //         success: function(data) {
-                //             console.log(data);
-                //             movePlacemark(data);
-                //         },
-                //         error: function(jqXHR, textStatus) {
-                //             getApiUrls().then(function(urls) {
-                //                 const localUrl = urls.Flights.Local + "/" + id;
-                //             console.log('Ошибка сети: ' + textStatus);
-                //             $.ajax({
-                //                 url: localUrl,
-                //                 method: 'GET',
-                //                 success: function(data) {
-                //                     movePlacemark(data);
-                //                 },
-                //                 error: function(jqXHR, textStatus) {
-                //                     console.log("Ошибка: " + textStatus);
-                //                 }
-                //             });
-                //         })
-                //     }})}), 1000)
-                // }
           });
 
 
