@@ -223,12 +223,6 @@ $(document).ready(function() {
     setTimeout(function() {
     }, 200)
 
-    
-// ДОДЕЛАТЬ
-// ДОДЕЛАТЬ
-// ДОДЕЛАТЬ
-// ДОДЕЛАТЬ
-// ДОДЕЛАТЬ
     //----------------------------- FLIGHTS_POST -----------------------------
 
     $("[name='flightForm']").one('submit', async function (event) { 
@@ -721,42 +715,7 @@ $(document).ready(function() {
                 });
             }
         }    
-
-        
-
-        // try {
-        //     const urls = await getApiUrls();
-        //     console.log(urls.Flights.Global);
-        //     $.ajax({
-        //         type: "POST",
-        //         url: urls.Flights.Global,
-        //         data: JSON.stringify(data),
-        //         contentType: "application/json",
-        //         success: function (response) {
-        //             console.log("Данные отправлены на " + urls.Flights.Global);
-        //             window.location.href = `/`;
-        //         },
-        //         error: function (error) {
-        //             console.log(error);
-        //         }
-        //     });
-        // } catch (er) {
-        //     const urls = await getApiUrls();
-        //     $.ajax({
-        //         type: "POST",
-        //         url: urls.Flights.Local,
-        //         data: JSON.stringify(data),
-        //         contentType: "application/json",
-        //         success: function (response) {
-        //             console.log("Данные отправлены на " + urls.Flights.Local);
-        //             window.location.href = `/`;
-        //         },
-        //         error: function (error) {
-        //             console.log("Ошибка сети");
-        //         }
-        //     });
-        // }
-        
+            
         }
         fetchCurrentPlane();
     })});
