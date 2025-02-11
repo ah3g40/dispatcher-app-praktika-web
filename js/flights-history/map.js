@@ -169,7 +169,7 @@ $(document).ready(function() {
 
                 function movePlacemark(flights) {
                     if (plane && myMap) {
-                        plane.geometry.setCoordinates([flights.latitude, flights.longitude]); // Обратите внимание на порядок
+                        plane.geometry.setCoordinates([flights.latitude, flights.longitude]);
                         flightLine1.geometry.setCoordinates([[flights.airportFrom.latitude, flights.airportFrom.longitude],[flights.latitude, flights.longitude]]); 
                         flightLine2.geometry.setCoordinates([[flights.latitude, flights.longitude],[flights.airportTo.latitude, flights.airportTo.longitude]]);
                         $(document).on('click', "#center", function (event) {
