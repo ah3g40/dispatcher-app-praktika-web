@@ -534,8 +534,7 @@ label {
   margin:auto;
   text-align: center;
 }
-/* @media only screen and (orientation: portrait) and (max-device-width: 769px) { */
-@media only screen and (max-width: 769px) {
+@media only screen and (orientation: portrait) and (max-device-width: 769px) {
   body{
     max-height: 100vh;
   }
@@ -577,8 +576,7 @@ label {
     overflow-y: auto;
   }
 }
-/* @media screen and (min-device-width: 769px) { */
-@media screen and (min-width: 769px) {
+@media screen and (min-device-width: 769px) {
   .buttonMobile{
     display: none;
   }
