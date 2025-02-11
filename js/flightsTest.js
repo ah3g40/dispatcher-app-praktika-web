@@ -40,17 +40,6 @@ function fetchFlightsLocal() {
     });
 }
 
-
-// async function displayFlights(flights) {
-//     const flightList = document.getElementById('flight-list');
-//     flights.forEach(flight => {
-//         const flightListItem = document.createElement('li');
-//         flightListItem.id = flight.id;
-//         flightListItem.textContent = flight.carrierCompany.name+" "+flight.plane.company.name+" "+flight.plane.tailNumber+" летит на скорости "+flight.plane.cruisingSpeed+" узлов из "+flight.airportFrom.icao+"("+flight.airportFrom.iata+") в "+flight.airportTo.icao+"("+flight.airportTo.iata+")";
-//         flightList.appendChild(flightListItem);
-//     });
-// }
-
 async function displayFlights(flights) {
     const list = document.getElementById('flight-list');
     flights.forEach(flight => {
@@ -112,20 +101,6 @@ async function displayFlights(flights) {
         flightList.appendChild(arrivalDate);
     });
 }
-
-// function getFlightsGlobalUrl() {
-//     $.getJSON('../json/apiUrls.json', function(data) {
-//         // Извлекаем значение Flights: Global
-//         var flightsGlobalUrl = data.Flights.Global;
-        
-//         // Выводим ссылку в консоль
-//         console.log('Flights Global URL:', flightsGlobalUrl)
-
-//         $.get(flightsGlobalUrl, function(data) {
-
-//         })
-//     })};
-
 
 $(document).ready(function() {
     // Функция для загрузки и отображения данных
